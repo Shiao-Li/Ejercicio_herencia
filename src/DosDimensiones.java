@@ -2,6 +2,7 @@ public class DosDimensiones
 {
     private double base;
     private double altura;
+    private double area;
 
     DosDimensiones()
     {

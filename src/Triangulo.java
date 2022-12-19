@@ -1,6 +1,20 @@
 public class Triangulo extends DosDimensiones
 {
-    private String estilo;
+    private double base;
+    private double altura;
+
+    public Triangulo(double base, double altura){
+        this.base = base;
+        this.altura = altura;
+        calcularArea();
+        calcularPerimetro();
+    }
+
+    @Override
+    public double calcularArea() {
+        area = base*altura/2;
+    }
+    /*private String estilo;
 
     Triangulo()
     {
@@ -28,5 +42,5 @@ public class Triangulo extends DosDimensiones
     void mostarEstilo()
     {
         System.out.println("Estilo: " + estilo);
-    }
+    }*/
 }
