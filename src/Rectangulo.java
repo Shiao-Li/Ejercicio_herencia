@@ -1,26 +1,29 @@
 public class Rectangulo extends Figura
 {
-    double altura, base;
+    int largo, ancho;
 
-    public Rectangulo(double largo, double ancho) {
-        this.altura = largo;
-        this.base = ancho;
+    public void setLargo(int largo) {
+        this.largo = largo;
+    }
+
+    public Rectangulo(int laro, int ancho)
+    {
+        this.largo = laro;
+        this.ancho = ancho;
         calcularPerimetro();
         calcularArea();
     }
-    protected void calcularArea(){
-        area=base*altura;
-    }
-    protected void calcularPerimetro(){
-        perimetro=(base*2+altura*2);
-    }
 
-    /*public void setLargo(int largo) {
-        this.altura = largo;
+    @Override
+    protected void calcularArea()
+    {
+        area = largo * ancho;
     }
-
-
+    protected void calcularPerimetro()
+    {
+        perimetro = 2 * largo + 2 * ancho;
+    }
     public void setAncho(int ancho) {
-        this.base = ancho;
-    }*/
+        this.ancho = ancho;
+    }
 }
